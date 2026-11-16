@@ -1,5 +1,5 @@
 mp_rust=9
-mp_highrise=10
+mp_highrise=11
 mp_terminal=2
 mp_afghan=2
 mp_derail=1

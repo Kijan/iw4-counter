@@ -1,0 +1,14 @@
+name: Upload-Benachrichtigung
+on: push
+permissions:
+  issues: write
+jobs:
+  melden:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kommentar mit Erwaehnung schreiben
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          MSG: ${{ github.event.head_commit.message }}
+        run: gh issue comment 1 --body "@Kijan Zaehler hochgeladen - $MSG"
